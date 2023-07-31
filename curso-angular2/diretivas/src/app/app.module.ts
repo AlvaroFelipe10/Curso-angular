@@ -11,6 +11,8 @@ import { FormsModule } from '@angular/forms';
 import { OperadorElvisComponent } from './operador-elvis/operador-elvis.component';
 import { FundoAmareloDirective } from './shared/fundo-amarelo.directive';
 import { DiretivasCustomizadasComponent } from './diretivas-customizadas/diretivas-customizadas.component';
+import { HighlightMouseDirective } from './shared/highlight-mouse.directive';
+import { HighlightDirective } from './shared/highlight.directive';
 
 @NgModule({
   declarations: [
@@ -22,6 +24,8 @@ import { DiretivasCustomizadasComponent } from './diretivas-customizadas/diretiv
     OperadorElvisComponent,
     FundoAmareloDirective,
     DiretivasCustomizadasComponent,
+    HighlightMouseDirective,
+    HighlightDirective,
   ],
   imports: [
     BrowserModule,
