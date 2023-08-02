@@ -1,10 +1,20 @@
-import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import { RouterModule, Routes } from "@angular/router";
+import { CursosComponent } from "./cursos/cursos.component";
+import { LoginComponent } from "./login/login.component";
+import { HomeComponent } from "./home/home.component";
+import { ModuleWithProviders, NgModule } from "@angular/core";
+import { CursoDetalheComponent } from "./curso-detalhe/curso-detalhe.component";
+import { CursoNaoEncontradoComponent } from "./curso-nao-encontrado/curso-nao-encontrado.component";
 
-const routes: Routes = [];
-
+const appRoutes: Routes = [
+    { path: 'cursos', component: CursosComponent },
+    { path: 'curso/:id', component: CursoDetalheComponent },
+    { path: 'naoEncontrado', component: CursoNaoEncontradoComponent },
+    { path: 'login', component: LoginComponent },
+    { path: '', component: HomeComponent }
+];
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(appRoutes)],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
