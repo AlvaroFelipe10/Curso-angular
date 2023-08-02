@@ -8,13 +8,15 @@ import { CursosComponent } from './cursos/cursos.component';
 import { LoginComponent } from './login/login.component';
 import { routing } from './app.rounting';
 import { FormsModule } from '@angular/forms';
+import { CursoDetalheComponent } from './curso-detalhe/curso-detalhe.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     CursosComponent,
-    LoginComponent
+    LoginComponent,
+    CursoDetalheComponent
   ],
   imports: [
     BrowserModule,
