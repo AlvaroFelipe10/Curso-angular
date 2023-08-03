@@ -5,7 +5,8 @@ import { ModuleWithProviders, NgModule } from "@angular/core";
 
 
 const appRoutes: Routes = [
-   // { path: 'cursos', component: CursosComponent },
+    { path: 'cursos', loadChildren: () => import('./cursos/cursos.module').then(m => m.CursosModule)},
+    { path: 'cursos', loadChildren: () => import('./alunos/alunos.module').then(m => m.AlunosModule)},
    // { path: 'curso/:id', component: CursoDetalheComponent },
    // { path: 'naoEncontrado', component: CursoNaoEncontradoComponent },
     { path: 'login', component: LoginComponent },
