@@ -8,8 +8,10 @@ import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { FormsModule } from '@angular/forms';
 //import { CursosModule } from './cursos/cursos.module';
-import { AlunosComponent } from './alunos/alunos.component';
+//import { AlunosComponent } from './alunos/alunos.component';
 import { AuthService } from './login/auth.service';
+import { AlunosModule } from './alunos/alunos.module';
+import { AuthGuard } from './guards/auth.guard';
 //import { AlunosModule } from './alunos/alunos.module';
 //import { CursoDetalheComponent } from './cursos/curso-detalhe/curso-detalhe.component';
 //import { CursosService } from './cursos/cursos.service';
@@ -27,9 +29,9 @@ import { AuthService } from './login/auth.service';
     AppRoutingModule,
     FormsModule,
    // CursosModule,
-  //  AlunosModule
+   // AlunosModule
   ],
-  providers: [AuthService],
+  providers: [AuthService, AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
